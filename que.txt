@@ -1,0 +1,43 @@
+query {
+  getAllUsers {
+    id
+    name
+    username
+    password
+  }
+}
+
+------------------------------------------------
+
+mutation {
+  createUser(name: "Rakesh", username: "Rakesh19", password: "admin123") {
+    name
+    username
+    password
+  }
+}
+
+------------------------------------------------------
+
+mutation {
+  deleteUser(id:3){
+    id
+  }
+}
+
+---------------------------------------------------------
+
+mutation {
+  updatePassword(username:"Rakesh19",oldPassword:"admin123",newPassword:"hello"){
+    id
+    name
+  }
+}
+
+---------------------------------------------------------------
+mutation {
+  updatePassword(username:"Rakesh19",oldPassword:"hello",newPassword:"admin1"){
+    successful
+    message
+  }
+}
